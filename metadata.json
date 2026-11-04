@@ -1,0 +1,6 @@
+{
+  "name": "MelonQuest - Watermelon Agriculture RPG",
+  "description": "A retro 2D pixel-art educational RPG teaching authentic watermelon agronomy, soil chemistry, integrated pest management, and harvest science.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

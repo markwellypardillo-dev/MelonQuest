@@ -1,0 +1,382 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #0d160e;
+    color: #e2f0d9;
+    font-family: 'VT323', monospace;
+    letter-spacing: 0.04em;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+/* 8-bit & 16-bit retro pixel border utility styles */
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-retro {
+  font-family: 'VT323', monospace;
+}
+
+/* Retro pixelated box with stepped corner shadows */
+.pixel-border {
+  border-style: solid;
+  border-width: 4px;
+  border-color: #1a2f1c;
+  box-shadow: 
+    inset -3px -3px 0px 0px #09120a,
+    inset 3px 3px 0px 0px #315735,
+    3px 3px 0px 0px #050a06;
+}
+
+.pixel-border-gold {
+  border-style: solid;
+  border-width: 4px;
+  border-color: #a07818;
+  box-shadow: 
+    inset -3px -3px 0px 0px #4d3608,
+    inset 3px 3px 0px 0px #f0c54d,
+    3px 3px 0px 0px #000000;
+}
+
+.pixel-border-danger {
+  border-style: solid;
+  border-width: 4px;
+  border-color: #7b1d1d;
+  box-shadow: 
+    inset -3px -3px 0px 0px #3c0c0c,
+    inset 3px 3px 0px 0px #d44d4d,
+    3px 3px 0px 0px #000000;
+}
+
+/* 16-Bit Textured Wood-Grain Frame with Brass Brackets */
+.pixel-wood-frame {
+  background-color: #53331b;
+  border: 4px solid #2e1a0b;
+  box-shadow: 
+    inset -4px -4px 0px 0px #241306,
+    inset 4px 4px 0px 0px #85532d,
+    inset -6px -6px 0px 0px #3d2412,
+    inset 6px 6px 0px 0px #a46738,
+    0px 8px 24px rgba(0, 0, 0, 0.75);
+}
+
+/* Aged Warm Parchment Paper with High Contrast Text */
+.pixel-parchment {
+  background-color: #f7eed7;
+  color: #271809;
+  border: 3px solid #bba377;
+  box-shadow: 
+    inset -2px -2px 0px 0px #d8c29d,
+    inset 2px 2px 0px 0px #fffcf5,
+    inset 0 0 16px rgba(133, 98, 48, 0.15),
+    3px 3px 0px 0px rgba(45, 29, 13, 0.5);
+}
+
+/* Heavy Dark-Metallic Pixel Art Frame Studded with Rivets */
+.pixel-metal-frame {
+  background: linear-gradient(180deg, #2a3138 0%, #1e242a 100%);
+  border: 4px solid #101418;
+  box-shadow: 
+    inset -4px -4px 0px 0px #0b0e11,
+    inset 4px 4px 0px 0px #4e5a66,
+    inset -6px -6px 0px 0px #181d22,
+    inset 6px 6px 0px 0px #3c4650,
+    0 8px 25px rgba(0, 0, 0, 0.85);
+}
+
+/* Industrial yellow-and-black hazard warning strip */
+.hazard-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    #f1c40f,
+    #f1c40f 8px,
+    #111111 8px,
+    #111111 16px
+  );
+}
+
+/* 3D Hanging Sign Panel */
+.pixel-hanging-sign {
+  position: relative;
+  border: 3px solid #1a1106;
+  box-shadow: 
+    inset -3px -3px 0px 0px rgba(0, 0, 0, 0.4),
+    inset 3px 3px 0px 0px rgba(255, 255, 255, 0.35),
+    3px 4px 0px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* Embossed 16-Bit Button Blocks */
+.pixel-embossed-gold {
+  background: linear-gradient(180deg, #6c4722 0%, #4a2e13 100%);
+  border: 3px solid #f0c54d;
+  box-shadow: 
+    inset -3px -3px 0px 0px #2a1808,
+    inset 3px 3px 0px 0px #ffd978,
+    3px 3px 0px 0px #110902;
+}
+
+.pixel-embossed-gold:hover {
+  background: linear-gradient(180deg, #82562b 0%, #5d3b1b 100%);
+  border-color: #ffe599;
+  box-shadow: 
+    inset -3px -3px 0px 0px #38210d,
+    inset 3px 3px 0px 0px #fff1b8,
+    3px 3px 0px 0px #000000;
+}
+
+.pixel-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a331c;
+  color: #e5f5dc;
+  border: 3px solid #2d5a32;
+  box-shadow: 
+    inset -2px -2px 0px 0px #0c180e,
+    inset 2px 2px 0px 0px #4a8a52,
+    2px 2px 0px 0px #050906;
+  cursor: pointer;
+  transition: none;
+}
+
+.pixel-btn:hover {
+  background-color: #234526;
+}
+
+.pixel-btn:active {
+  box-shadow: 
+    inset 2px 2px 0px 0px #0c180e,
+    inset -2px -2px 0px 0px #4a8a52;
+  transform: translate(2px, 2px);
+}
+
+.pixel-btn-action {
+  background-color: #a83828;
+  border-color: #d84c37;
+  color: #ffffff;
+  box-shadow: 
+    inset -2px -2px 0px 0px #5e190f,
+    inset 2px 2px 0px 0px #ea6955,
+    2px 2px 0px 0px #050906;
+}
+
+.pixel-btn-action:hover {
+  background-color: #bc3e2c;
+}
+
+.pixel-btn-action:active {
+  box-shadow: 
+    inset 2px 2px 0px 0px #5e190f,
+    inset -2px -2px 0px 0px #ea6955;
+  transform: translate(2px, 2px);
+}
+
+/* CRT monitor subtle scanline effect */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.1) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* 16-Bit Warm Wood & Brass HUD Beam */
+.pixel-wood-bar {
+  background: linear-gradient(180deg, #4a2c14 0%, #361f0d 100%);
+  border: 3px solid #1e1005;
+  box-shadow:
+    inset -2px -2px 0px 0px #241306,
+    inset 2px 2px 0px 0px #7c4d28,
+    0px 3px 0px 0px #120902;
+}
+
+/* Tactile 16-Bit Wood & Brass Action Button */
+.pixel-wood-btn {
+  background: linear-gradient(180deg, #633d1e 0%, #482b13 100%);
+  color: #fdf3d7;
+  border: 2px solid #231206;
+  box-shadow:
+    inset -2px -2px 0px 0px #2b1809,
+    inset 2px 2px 0px 0px #8f5c34,
+    2px 2px 0px 0px #120902;
+  cursor: pointer;
+}
+
+.pixel-wood-btn:hover {
+  background: linear-gradient(180deg, #784b26 0%, #5a3719 100%);
+  border-color: #d4a838;
+  color: #ffffff;
+}
+
+.pixel-wood-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow:
+    inset 2px 2px 0px 0px #2b1809,
+    inset -1px -1px 0px 0px #8f5c34;
+}
+
+/* Custom 16-Bit Pixel Scrollbars for Parchment & Wood Panels */
+.pixel-scroll::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.pixel-scroll::-webkit-scrollbar-track {
+  background: #dec8a2;
+  border-left: 2px solid #8d6e63;
+}
+
+.pixel-scroll::-webkit-scrollbar-thumb {
+  background: #6c4722;
+  border: 2px solid #2e1a0b;
+  box-shadow: inset 2px 2px 0px #a46738;
+}
+
+.pixel-scroll::-webkit-scrollbar-thumb:hover {
+  background: #85532d;
+}
+
+/* Custom 16-Bit Dark Wood & Forest Scrollbars for HUD Modals */
+.pixel-dark-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #6c4722 #142016;
+}
+
+.pixel-dark-scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.pixel-dark-scroll::-webkit-scrollbar-track {
+  background: #142016;
+  border-left: 2px solid #3d2412;
+}
+
+.pixel-dark-scroll::-webkit-scrollbar-thumb {
+  background: #6c4722;
+  border: 2px solid #241306;
+  box-shadow: inset 1px 1px 0px #a46738;
+}
+
+.pixel-dark-scroll::-webkit-scrollbar-thumb:hover {
+  background: #85532d;
+}
+
+
+/* Mario Odyssey style pause screen animations */
+@keyframes odysseySlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes odysseyFadeIn {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(4px);
+  }
+}
+
+@keyframes odysseyCursorPulse {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+.animate-odyssey-slide {
+  animation: odysseySlideIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-odyssey-fade {
+  animation: odysseyFadeIn 0.25s ease-out both;
+}
+
+.animate-odyssey-cursor {
+  animation: odysseyCursorPulse 0.7s ease-in-out infinite;
+}
+
+/* Mario Odyssey style slanted menu banner & animations */
+.pixel-slant-banner {
+  transform: skewX(-9deg);
+  border: 3px solid #000000;
+  box-shadow: 
+    inset -3px -3px 0px 0px #cccccc,
+    inset 3px 3px 0px 0px #ffffff,
+    4px 4px 0px 0px #000000;
+}
+
+.pixel-slant-unselected {
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     3px  3px 0 rgba(0, 0, 0, 0.85);
+}
+
+@keyframes characterBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes capEyesBlink {
+  0%, 93%, 97%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.12);
+  }
+}
+
+@keyframes miniWalker {
+  0% {
+    transform: translateX(-60px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 80px));
+  }
+}
+
+.animate-character-bob {
+  animation: characterBob 3s ease-in-out infinite;
+}
+
+.animate-cap-blink {
+  animation: capEyesBlink 4.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.animate-mini-walker {
+  animation: miniWalker 20s linear infinite;
+}
+
